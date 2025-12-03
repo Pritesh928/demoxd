@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Upload Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+        }
+
+        /* -------- TOP GOVERNMENT HEADER -------- */
+        .gov-header {
+            width: 100%;
+            background: white;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .gov-header .left-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .gov-header img {
+            height: 55px;
+        }
+
+        .gov-header h1 {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        /* -------- NAVBAR -------- */
+        nav {
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 18px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li {
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+        }
+
+        nav ul li:hover {
+            color: #2563eb;
+        }
+
+        .btn-primary {
+            background: #ff914d;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* -------- UPLOAD SECTION -------- */
+
+        .container {
+            max-width: 950px;
+            margin: 60px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #1e293b;
+        }
+
+        .subtitle {
+            font-size: 15px;
+            margin-bottom: 25px;
+            color: #6b7280;
+        }
+
+        .upload-box {
+            border: 2px dashed #94a3b8;
+            padding: 50px;
+            border-radius: 18px;
+            text-align: center;
+            cursor: pointer;
+            background: #f8fafc;
+            transition: 0.2s;
+        }
+
+        .upload-box:hover {
+            border-color: #2563eb;
+            background: #eef5ff;
+        }
+
+        .upload-box img {
+            width: 65px;
+            margin-bottom: 10px;
+        }
+
+        .upload-options {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        button {
+            padding: 12px 22px;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: 0.25s;
+        }
+
+        .pdf-btn { background: #ef4444; color: white; }
+        .word-btn { background: #2563eb; color: white; }
+        .excel-btn { background: #16a34a; color: white; }
+
+        button:hover { opacity: .85; }
+    </style>
+</head>
+<body>
+
+    <!-- Government Header -->
+    <header class="gov-header">
+        <div class="left-section">
+            <img src="./f.png">
+            <h1></h1>
+            <h1>Ministry of Coal</h1>
+        </div>
+        <button class="btn-primary">Get Started</button>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Components</li>
+            <li>Docs</li>
+            <li>List</li>
+            <li>Simple</li>
+            <li>With Icon</li>
+        </ul>
+    </nav>
+
+    <!-- Upload Section -->
+    <div class="container">
+        <h2 class="title">Upload Your Documents</h2>
+        <p class="subtitle">Upload your project files in PDF, DOCX or XLSX format.</p>
+
+        <label class="upload-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828970.png">
+            <p>Click to browse or drag and drop your file here</p>
+            <input type="file" hidden>
+        </label>
+
+        <div class="upload-options">
+            <button class="pdf-btn">📄 Upload PDF</button>
+            <button class="word-btn">📝 Upload Word</button>
+            <button class="excel-btn">📊 Upload Excel</button>
+        </div>
+    </div>
+
+</body>
+</html>
